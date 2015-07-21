@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DetailViewController.h"
+
 
 @interface ViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *coordLabel;
+- (IBAction)goBtn:(id)sender;
+
+-(IBAction)unwindSegue: (UIStoryboardSegue *)segue;
+
 
 
 @end
