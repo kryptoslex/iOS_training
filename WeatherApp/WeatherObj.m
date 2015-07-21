@@ -77,7 +77,7 @@
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
     NSDateFormatter *formatter= [[NSDateFormatter alloc] init];
     [formatter setLocale:[NSLocale currentLocale]];
-    [formatter setDateFormat:@"MM/dd/yyyy hh:mma"];
+    [formatter setDateFormat:@"hh:mm a"];
     sys.sunrise = [formatter stringFromDate:date];
     
     unixTimeStamp = [system[@"sunset"] doubleValue];
@@ -85,7 +85,7 @@
     date = [NSDate dateWithTimeIntervalSince1970:_interval];
     formatter= [[NSDateFormatter alloc] init];
     [formatter setLocale:[NSLocale currentLocale]];
-    [formatter setDateFormat:@"MM/dd/yyyy hh:mma"];
+    [formatter setDateFormat:@"hh:mm a"];
     sys.sunset = [formatter stringFromDate:date];
     
     return sys;

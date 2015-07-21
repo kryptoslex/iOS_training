@@ -17,10 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xQ-EG-5BW">
-                                <rect key="frame" x="20" y="101" width="560" height="398"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coordinates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvS-8Q-ynp">
                                 <rect key="frame" x="251" y="34" width="98" height="21"/>
                                 <constraints>
@@ -45,36 +41,41 @@
                                     <segue destination="cc5-Ls-OxH" kind="show" identifier="detSegue" id="MHh-ur-lz3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(10.3312523 , 123.9086006)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsG-Pa-stn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(longitude , latitude)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsG-Pa-stn">
                                 <rect key="frame" x="162" y="55" width="277" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="277" id="whS-3i-cqS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="Yfw-mE-rae">
+                                <rect key="frame" x="20" y="104" width="560" height="392"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="oJA-hT-qdg"/>
+                                </connections>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7xQ-EG-5BW" firstAttribute="centerX" secondItem="xBa-ka-zSW" secondAttribute="centerX" id="5gW-kl-EWI"/>
-                            <constraint firstItem="7xQ-EG-5BW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="78Q-Al-6vo"/>
+                            <constraint firstItem="Yfw-mE-rae" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3Ix-dG-ii9"/>
+                            <constraint firstItem="Yfw-mE-rae" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5In-F8-yIh"/>
                             <constraint firstItem="fvS-8Q-ynp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="80p-YL-biF"/>
-                            <constraint firstItem="7xQ-EG-5BW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B1S-Ez-kmu"/>
                             <constraint firstItem="EsG-Pa-stn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="IJI-hx-KbO"/>
                             <constraint firstItem="EsG-Pa-stn" firstAttribute="top" secondItem="fvS-8Q-ynp" secondAttribute="bottom" id="KB1-fh-z33"/>
-                            <constraint firstItem="7xQ-EG-5BW" firstAttribute="top" secondItem="EsG-Pa-stn" secondAttribute="bottom" constant="25" id="NcV-1q-ONG"/>
-                            <constraint firstItem="7xQ-EG-5BW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="101" id="S6T-7E-BaK"/>
-                            <constraint firstItem="7xQ-EG-5BW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Vf0-e4-2bp"/>
+                            <constraint firstItem="xBa-ka-zSW" firstAttribute="top" secondItem="Yfw-mE-rae" secondAttribute="bottom" constant="23" id="KVp-LJ-9eG"/>
+                            <constraint firstItem="xBa-ka-zSW" firstAttribute="centerX" secondItem="Yfw-mE-rae" secondAttribute="centerX" id="Vpf-xf-q7n"/>
+                            <constraint firstItem="Yfw-mE-rae" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="al3-vJ-TO7"/>
                             <constraint firstItem="EsG-Pa-stn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fVx-6f-GKm"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xBa-ka-zSW" secondAttribute="bottom" constant="47" id="fc0-ga-Rho"/>
+                            <constraint firstItem="Yfw-mE-rae" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gaB-i0-hM6"/>
                             <constraint firstItem="fvS-8Q-ynp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="14" id="hsT-1a-7r5"/>
-                            <constraint firstItem="7xQ-EG-5BW" firstAttribute="centerX" secondItem="EsG-Pa-stn" secondAttribute="centerX" id="lI4-fM-Shj"/>
-                            <constraint firstItem="7xQ-EG-5BW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nbw-Go-go5"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="coordLabel" destination="EsG-Pa-stn" id="LCG-sV-DXv"/>
+                        <outlet property="mapView" destination="Yfw-mE-rae" id="yFt-XV-ZX7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

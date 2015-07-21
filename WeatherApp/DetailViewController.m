@@ -69,7 +69,8 @@
     [super viewDidLoad];
     
     //self.dataDict = dataDict;
-    [self fetchWeatherWithLongitude:123.9086006  latitude:10.3312523];
+    NSLog(@"Coordinates (%f, %f)", self.coordLong, self.coordLat);
+   [self fetchWeatherWithLongitude:self.coordLong  latitude:self.coordLat];
     
 }
 

@@ -29,11 +29,46 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    //[self fetchWeatherForecast];
-   
+
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    [self.mapView addGestureRecognizer:tapGesture];
 }
 
+- (void)handleTap:(id)sender
+{
+    UITapGestureRecognizer *tapGesture = (UITapGestureRecognizer*)sender;
+    
+    CGPoint tapPoint = [tapGesture locationInView:self.mapView];
+    CLLocationCoordinate2D coord = [self.mapView convertPoint:tapPoint toCoordinateFromView:self.mapView];
+    
+    NSUInteger numberOfTouches = [tapGesture numberOfTouches];
+    
+    if (numberOfTouches == 1) {
+        NSLog(@"Tap location was %.0f, %.0f", tapPoint.x, tapPoint.y);
+        NSLog(@"World coordinate was longitude %f, latitude %f", coord.longitude, coord.latitude);
+        self.coordLabel.text = [NSString stringWithFormat:@("(%.7f , %.7f)"), coord.longitude, coord.latitude];
+        
+        self.longVal = coord.longitude;
+        self.latVal = coord.latitude;
+        
+    } else {
+        NSLog(@"Number of touches was %ld, ignoring", numberOfTouches);
+    }
+}
+
+
+- (void)longpressToGetLocation:(UIGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer.state != UIGestureRecognizerStateBegan)
+        return;
+    
+    CGPoint touchPoint = [gestureRecognizer locationInView:self.mapView];
+    CLLocationCoordinate2D location =
+    [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
+    
+    NSLog(@"Location found from Map: %f %f",location.latitude,location.longitude);
+    
+}
 
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -45,6 +80,11 @@
     if([[segue identifier] isEqualToString:@"detSegue"])
     {
         //NSLog(@"data = %@", self.weather.dataDict);
+        UINavigationController *nav = [segue destinationViewController];
+        DetailViewController *det = (DetailViewController *)nav.topViewController;
+        det.coordLong = self.longVal;
+        det.coordLat = self.latVal;
+        
     }
     
     //DetailViewController *detView = [segue destinationViewController];
