@@ -51,7 +51,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="Yfw-mE-rae">
-                                <rect key="frame" x="20" y="104" width="560" height="392"/>
+                                <rect key="frame" x="20" y="84" width="560" height="412"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="oJA-hT-qdg"/>
                                 </connections>
@@ -66,7 +66,7 @@
                             <constraint firstItem="EsG-Pa-stn" firstAttribute="top" secondItem="fvS-8Q-ynp" secondAttribute="bottom" id="KB1-fh-z33"/>
                             <constraint firstItem="xBa-ka-zSW" firstAttribute="top" secondItem="Yfw-mE-rae" secondAttribute="bottom" constant="23" id="KVp-LJ-9eG"/>
                             <constraint firstItem="xBa-ka-zSW" firstAttribute="centerX" secondItem="Yfw-mE-rae" secondAttribute="centerX" id="Vpf-xf-q7n"/>
-                            <constraint firstItem="Yfw-mE-rae" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="al3-vJ-TO7"/>
+                            <constraint firstItem="Yfw-mE-rae" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-10" id="al3-vJ-TO7"/>
                             <constraint firstItem="EsG-Pa-stn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fVx-6f-GKm"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xBa-ka-zSW" secondAttribute="bottom" constant="47" id="fc0-ga-Rho"/>
                             <constraint firstItem="Yfw-mE-rae" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gaB-i0-hM6"/>
@@ -94,18 +94,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4zp-aD-llm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="118" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4zp-aD-llm">
                                 <rect key="frame" x="20" y="20" width="560" height="560"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="thisCell" rowHeight="120" id="ZoW-fs-pGs">
-                                        <rect key="frame" x="0.0" y="86" width="560" height="120"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="thisCell" rowHeight="118" id="ZoW-fs-pGs">
+                                        <rect key="frame" x="0.0" y="86" width="560" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZoW-fs-pGs" id="uVP-oS-I10">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="119"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="117"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyz-NL-wCs">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyz-NL-wCs">
                                                     <rect key="frame" x="153" y="51" width="254" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="254" id="xuB-sh-Yb6"/>
