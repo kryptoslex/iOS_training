@@ -67,7 +67,8 @@
     [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
     
     NSLog(@"Location found from Map: %f %f",location.latitude,location.longitude);
-
+    //demo again
+    //demo 2
 }
 
 
