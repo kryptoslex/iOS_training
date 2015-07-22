@@ -44,17 +44,27 @@
     NSUInteger numberOfTouches = [tapGesture numberOfTouches];
     
     if (numberOfTouches == 1) {
+        
+        if(self.mapView.annotations)
+        {
+          [self.mapView removeAnnotations:self.mapView.annotations];
+        }
+        
         NSLog(@"Tap location was %.0f, %.0f", tapPoint.x, tapPoint.y);
         NSLog(@"World coordinate was longitude %f, latitude %f", coord.longitude, coord.latitude);
         self.coordLabel.text = [NSString stringWithFormat:@("(%.7f , %.7f)"), coord.longitude, coord.latitude];
         
         self.longVal = coord.longitude;
         self.latVal = coord.latitude;
+        MKPointAnnotation *annot = [[MKPointAnnotation alloc] init];
+        annot.coordinate = coord;
+        [self.mapView addAnnotation:annot];
         
     } else {
         NSLog(@"Number of touches was %ld, ignoring", numberOfTouches);
     }
 }
+
 
 
 - (void)longpressToGetLocation:(UIGestureRecognizer *)gestureRecognizer

@@ -21,5 +21,7 @@
 @property WeatherObj * weather;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *cityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *countryLabel;
 
 @end

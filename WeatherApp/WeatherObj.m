@@ -46,7 +46,10 @@
     [city.dataDict setValue:city.weatherCity forKey:@"City"];
     [city.dataDict setValue:city.coordinate.longitude forKey:@"Longitude"];
     [city.dataDict setValue:city.coordinate.latitude forKey:@"Latitude"];
-    [city.dataDict setValue:city.mainnode.temp forKey:@"Temperature"];
+    [city.dataDict setValue:city.mainnode.temp forKey:@"Feels like"];
+    [city.dataDict setValue:city.mainnode.pressure forKey:@"Pressure"];
+    [city.dataDict setValue:city.mainnode.temp_max forKey:@"Max Temp"];
+    [city.dataDict setValue:city.mainnode.temp_min forKey:@"Min Temp"];
     [city.dataDict setValue:city.sys.sunrise forKey:@"Sunrise"];
     [city.dataDict setValue:city.sys.sunset forKey:@"Sunset"];
     [city.dataDict setValue:city.mainnode.humidity forKey:@"Humidity"];
