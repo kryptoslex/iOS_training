@@ -68,6 +68,7 @@
     
     NSLog(@"Location found from Map: %f %f",location.latitude,location.longitude);
     
+    //just for gitdemo
 }
 
 
