@@ -8,16 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import "DetailViewController.h"
+#import <MapKit/MapKit.h>
 
 
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *coordLabel;
 - (IBAction)goBtn:(id)sender;
-
 -(IBAction)unwindSegue: (UIStoryboardSegue *)segue;
+- (void)longpressToGetLocation:(UIGestureRecognizer *)gestureRecognizer;
 
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
+@property double latVal;
+@property double longVal;
 
 @end
 

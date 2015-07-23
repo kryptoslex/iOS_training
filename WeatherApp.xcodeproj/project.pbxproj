@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		901FF7221B5F704A001AE292 /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 901FF7211B5F704A001AE292 /* testViewController.m */; };
 		90ED696F1B5CC28800A39D22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90ED696E1B5CC28800A39D22 /* main.m */; };
 		90ED69721B5CC28900A39D22 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90ED69711B5CC28900A39D22 /* AppDelegate.m */; };
 		90ED69751B5CC28900A39D22 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90ED69741B5CC28900A39D22 /* ViewController.m */; };
@@ -18,6 +19,7 @@
 		90ED69A21B5CC45200A39D22 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 90ED69A11B5CC45200A39D22 /* APIClient.m */; };
 		90ED69A51B5CC87E00A39D22 /* APIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 90ED69A41B5CC87E00A39D22 /* APIRequest.m */; };
 		90ED69B01B5CC9DB00A39D22 /* Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90ED69AF1B5CC9DB00A39D22 /* Coordinate.m */; };
+		90F33ED61B5E73C900B07E2F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F33ED51B5E73C900B07E2F /* MapKit.framework */; };
 		90FDE5631B5DD0F000E1F445 /* WeatherObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FDE5621B5DD0F000E1F445 /* WeatherObj.m */; };
 		90FDE5661B5DD4D700E1F445 /* Sys.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FDE5651B5DD4D700E1F445 /* Sys.m */; };
 		90FDE5691B5DDDC500E1F445 /* MainNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FDE5681B5DDDC500E1F445 /* MainNode.m */; };
@@ -46,6 +48,8 @@
 		007256386C809DF3D85B8ECC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		30298D3971BDF868E8B75E25 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4578618E3E73F3111F7AB9A0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		901FF7201B5F704A001AE292 /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testViewController.h; sourceTree = "<group>"; };
+		901FF7211B5F704A001AE292 /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testViewController.m; sourceTree = "<group>"; };
 		90ED696A1B5CC28800A39D22 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90ED696E1B5CC28800A39D22 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90ED69701B5CC28800A39D22 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 		90ED69A41B5CC87E00A39D22 /* APIRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIRequest.m; sourceTree = "<group>"; };
 		90ED69AE1B5CC9DB00A39D22 /* Coordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coordinate.h; sourceTree = "<group>"; };
 		90ED69AF1B5CC9DB00A39D22 /* Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coordinate.m; sourceTree = "<group>"; };
+		90F33ED51B5E73C900B07E2F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		90FDE5611B5DD0F000E1F445 /* WeatherObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherObj.h; sourceTree = "<group>"; };
 		90FDE5621B5DD0F000E1F445 /* WeatherObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherObj.m; sourceTree = "<group>"; };
 		90FDE5641B5DD4D700E1F445 /* Sys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sys.h; sourceTree = "<group>"; };
@@ -83,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90F33ED61B5E73C900B07E2F /* MapKit.framework in Frameworks */,
 				E1C3CA697B6A61CDDF8ED35B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +145,8 @@
 				90ED697B1B5CC28900A39D22 /* LaunchScreen.storyboard */,
 				90ED697E1B5CC28900A39D22 /* Info.plist */,
 				90ED696D1B5CC28800A39D22 /* Supporting Files */,
+				901FF7201B5F704A001AE292 /* testViewController.h */,
+				901FF7211B5F704A001AE292 /* testViewController.m */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -209,6 +217,7 @@
 		A778A425CE22F06440FA3235 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				90F33ED51B5E73C900B07E2F /* MapKit.framework */,
 				30298D3971BDF868E8B75E25 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -389,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90FDE5661B5DD4D700E1F445 /* Sys.m in Sources */,
+				901FF7221B5F704A001AE292 /* testViewController.m in Sources */,
 				90ED69751B5CC28900A39D22 /* ViewController.m in Sources */,
 				90ED69721B5CC28900A39D22 /* AppDelegate.m in Sources */,
 				90ED696F1B5CC28800A39D22 /* main.m in Sources */,

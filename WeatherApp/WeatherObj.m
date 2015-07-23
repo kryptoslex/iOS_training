@@ -46,7 +46,10 @@
     [city.dataDict setValue:city.weatherCity forKey:@"City"];
     [city.dataDict setValue:city.coordinate.longitude forKey:@"Longitude"];
     [city.dataDict setValue:city.coordinate.latitude forKey:@"Latitude"];
-    [city.dataDict setValue:city.mainnode.temp forKey:@"Temperature"];
+    [city.dataDict setValue:city.mainnode.temp forKey:@"Feels like"];
+    [city.dataDict setValue:city.mainnode.pressure forKey:@"Pressure"];
+    [city.dataDict setValue:city.mainnode.temp_max forKey:@"Max Temp"];
+    [city.dataDict setValue:city.mainnode.temp_min forKey:@"Min Temp"];
     [city.dataDict setValue:city.sys.sunrise forKey:@"Sunrise"];
     [city.dataDict setValue:city.sys.sunset forKey:@"Sunset"];
     [city.dataDict setValue:city.mainnode.humidity forKey:@"Humidity"];
@@ -77,7 +80,7 @@
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
     NSDateFormatter *formatter= [[NSDateFormatter alloc] init];
     [formatter setLocale:[NSLocale currentLocale]];
-    [formatter setDateFormat:@"MM/dd/yyyy hh:mma"];
+    [formatter setDateFormat:@"hh:mm a"];
     sys.sunrise = [formatter stringFromDate:date];
     
     unixTimeStamp = [system[@"sunset"] doubleValue];
@@ -85,7 +88,7 @@
     date = [NSDate dateWithTimeIntervalSince1970:_interval];
     formatter= [[NSDateFormatter alloc] init];
     [formatter setLocale:[NSLocale currentLocale]];
-    [formatter setDateFormat:@"MM/dd/yyyy hh:mma"];
+    [formatter setDateFormat:@"hh:mm a"];
     sys.sunset = [formatter stringFromDate:date];
     
     return sys;

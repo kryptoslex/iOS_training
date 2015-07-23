@@ -26,7 +26,7 @@
     APIRequest *request = [APIRequest new];
     [request fetchWeatherWithParameters:parameters onSuccess:^(id JSON) {
         NSLog(@"Success!");
-        //NSLog(@"sjon data = %@", JSON);
+        NSLog(@"sjon data = %@", JSON);
         self.weather = [WeatherObj initWithDictionary:JSON];
         NSLog(@"datadict = %@", self.weather.dataDict);
         
@@ -37,7 +37,10 @@
         [self.dataDict setValue:[self.weather.dataDict valueForKey:@"humidity"] forKey: @"Humidity"];
         
         //NSLog(@"data = %@", [self.dataDict  description]);
-        self.keyArray = [[NSArray alloc] initWithObjects:@"Country", @"City",@"Temperature",@"Humidity",@"Sunrise",@"Sunset",nil];
+        self.keyArray = [[NSArray alloc] initWithObjects:@"Feels like",@"Pressure",@"Humidity",@"Sunrise",@"Sunset",nil];
+        
+        self.cityLabel.text = [self.weather.dataDict valueForKey:@"City"];
+        self.countryLabel.text = [self.weather.dataDict valueForKey:@"Country"];
         
         self.valueArray = [[NSMutableArray alloc]init];
         for (int x=0 ; x< [self.keyArray count]; x++) {
@@ -69,7 +72,8 @@
     [super viewDidLoad];
     
     //self.dataDict = dataDict;
-    [self fetchWeatherWithLongitude:123.9086006  latitude:10.3312523];
+    NSLog(@"Coordinates (%f, %f)", self.coordLong, self.coordLat);
+   [self fetchWeatherWithLongitude:self.coordLong  latitude:self.coordLat];
     
 }
 
